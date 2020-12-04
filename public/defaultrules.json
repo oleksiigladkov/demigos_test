@@ -1,0 +1,47 @@
+{
+    "inclusion": [
+        {
+            "type": "page",
+            "name": "all pages",
+            "rule": "*",
+            "exact": false,
+            "url": ""
+        },
+        {
+            "type": "page",
+            "name": "product page",
+            "rule": "/product",
+            "exact": false,
+            "url": ""
+        },
+        {
+            "type": "page",
+            "name": "home page",
+            "rule": "/home",
+            "exact": false,
+            "url": ""
+        },
+        {
+            "type": "page",
+            "name": "password page",
+            "rule": "/password",
+            "exact": false,
+            "url": ""
+        },
+        {
+            "type": "custom",
+            "name": "custom",
+            "rule": "custom",
+            "exact": true,
+            "url": "/favourite"
+        }
+    ],
+    "exclusion": [
+        {
+            "type": "page",
+            "name": "products page",
+            "rule": "/products",
+            "exact": true
+        }
+    ]
+}

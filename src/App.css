@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+:root {
+  --gray-color: #bdb8b8;
+  --blue-color: #7190f3;
+  --white-color: #fff;
+}
+* {
+  font-size: 14px;
+}
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+select, input, button {
+  padding: 8px 4px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  border-color: var(--gray-color);
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select:hover, input:hover, button:hover,
+select:focus, input:focus, button:focus {
+  border-color: var(--blue-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* main blocks */
+.wrapper {
+  min-height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* header */
+.header {
+  height: 64px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background:#a0a4aa; */
+}
+  .header .logo img {
+    height: 64px;
+  }
+  .header .logo, .header .links {
+    display: inline-flex;
+  }
+  .header .links a {
+    display: inline-block;
+    line-height: 64px;
+  }
+  .header .links a + a {
+    margin-left: 14px;
+  }
+
+/* pages */
+/* rules page */
+.rulesForm {
+  text-transform: capitalize;
+}
+.rulesForm .buttons, .button {
+    text-transform: uppercase;
+}
+.rulesForm li {
+  list-style: none;
+}
+.rulesForm .title {
+  padding: 14px 14px 28px 14px;
+  border-bottom: 1px solid var(--gray-color);
+}
+.rulesForm button {
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.rulesForm .section {
+  margin-top: 14px;
+  padding: 14px;
+  border: 1px solid var(--gray-color);
+  border-radius: 4px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rulesForm .delete {
+  padding: 4px 8px;
+  border-radius: 24px;
+  color: var(--gray-color);
+  border: 1px solid var(--gray-color);
+  font-weight: bold;
+  cursor: pointer;
 }
+.rulesForm .delete:hover {
+  border-color: var(--blue-color);
+  color: var(--blue-color);
+}
+.rulesForm .delete::before {
+  content: "x";
+}
+.rulesForm select, .rulesForm select option {
+  text-transform: capitalize;
+}
+.rulesForm .list {
+  padding-inline-start: 0;
+}
+.rulesForm .rule {
+  display: flexbox;
+}
+.rulesForm .rule > * {
+  display: inline-flex;
+}
+.rulesForm .rule + .rule {
+  margin-top: 14px;
+}
+.rulesForm .rule * + *  {
+  margin-left: 14px;
+}
+
