@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from '';
 import { withRouter } from 'react-router-dom';
 import Overlay from '../Layout/Overlay';
 import Rules from './Rules';
